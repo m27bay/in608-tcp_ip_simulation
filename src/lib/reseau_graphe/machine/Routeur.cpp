@@ -522,13 +522,6 @@ void Routeur::traitementPaquetLSU(PaquetLSU* lsu) {
                     m_IdRouteur,
                     lsa.getIdRouteur()
             );
-            /* std::cout << "Table routage AFTER\n";
-            for (auto it: m_TableRoutage) {
-                std::cout << "To " << it.first->getIdRouteur() << std::endl;
-                for (Liaison* vec: it.second) {
-                    std::cout << *vec << std::endl;
-                }
-            }*/
         }
     }
 
