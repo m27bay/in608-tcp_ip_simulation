@@ -516,7 +516,7 @@ void Routeur::traitementPaquetLSU(PaquetLSU* lsu) {
             );
             LSAMisAJour.emplace_back(misAJour);
 
-            std::cout << "lsa.getIdRouteur() : " << lsa.getIdRouteur() << std::endl;
+            // std::cout << "lsa.getIdRouteur() : " << lsa.getIdRouteur() << std::endl;
             Routeur* routeur = ReseauGraphe::getPtrRouteur(lsa.getIdRouteur());
             m_TableRoutage[routeur] = ReseauGraphe::routageDynamique(
                     m_IdRouteur,
