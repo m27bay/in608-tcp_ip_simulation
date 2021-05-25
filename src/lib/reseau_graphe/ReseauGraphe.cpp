@@ -37,21 +37,10 @@ ReseauGraphe::~ReseauGraphe() {
     }
 }
 
-void ReseauGraphe::remettreIdAZero() {
-    Machine* m = dynamic_cast<Machine*> (m_Machines[0]);
-    m->remettreIdAZero();
-
-    for (Machine* m : m_Machines) {
-        if (Ordinateur* o = dynamic_cast<Ordinateur*> (m)) {
-            o->remettreIdAZero();
-        } else if (Routeur* r = dynamic_cast<Routeur*> (m)) {
-            r->remettreIdAZero();
-        } else if (Commutateur* c = dynamic_cast<Commutateur*> (m)) {
-            c->remettreIdAZero();
-        }
-    }
-}
-
+/**
+ * @brief Remet les identifiants des machines a 0.
+ * 
+ */
 void ReseauGraphe::remettreIdAZero() {
     Machine* m = dynamic_cast<Machine*> (m_Machines[0]);
     m->remettreIdAZero();
