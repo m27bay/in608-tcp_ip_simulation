@@ -357,6 +357,7 @@ void Machine::lancerHorloge() {
  */
 void Machine::arreterHorloge() {
     m_Chrono.arreter();
+    m_Chrono.remettreAZero();
 }
 
 /**
